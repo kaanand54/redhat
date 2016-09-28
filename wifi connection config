@@ -1,0 +1,14 @@
+#conneting with wi-fi on rhel 6.8(santigo)
+
+$ sudo ifconfig wlan0 up
+$ wpa_passphrase SSID >> /etc/wpa_supplicant.conf
+    instead of SSID write SSID Name
+
+asks for password....
+
+$ sudo rm -r /var/run/wpa_supplicant/*
+$ wpa_supplicant -B -i wlan0 -f /var/log/wpa-supplicant.log -c /etc/wpa_supplicant.conf
+$ tail /var/log/wpa_supplicant.log
+$ sudo dhclient -v wlan0
+$ ifconfig
+these u can do for connect to internet

@@ -11,4 +11,8 @@ $ wpa_supplicant -B -i wlan0 -f /var/log/wpa-supplicant.log -c /etc/wpa_supplica
 $ tail /var/log/wpa_supplicant.log
 $ sudo dhclient -v wlan0
 $ ifconfig
+
 these u can do for connect to internet
+
+
+Even after that if you are not able to  connect then erase all data from /etc/wpa_supplicant.conf and then try above step once again
